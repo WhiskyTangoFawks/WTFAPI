@@ -2,11 +2,12 @@ package cavebiomes.api;
 
 import java.util.Random;
 import net.minecraft.world.World;
+import wtfcore.api.GenCoreBase;
 
 public class CaveType
 {
 	public static GenCoreBase gen;
-	public final String	name = "RENAME ME";
+	public String name;
 	protected int depth = 0; //Set this to 1 for shallow, 2 for mid, and 3 for deep
 
 	public int DungeonWeight = ConfigAPI.dungeonChance;
@@ -17,13 +18,13 @@ public class CaveType
 	public DungeonSet dungeons;
 	
 
-	public CaveType(int cavedepth,  DungeonSet dungeonset)
+	public CaveType(String name, int cavedepth,  DungeonSet dungeonset)
 	{
 		this.depth = cavedepth;
 		this.ceilingaddonchance = ConfigAPI.ceilingAddonChance * cavedepth;
 		this.flooraddonchance = ConfigAPI.floorAddonChance * depth;
 		this.dungeons = dungeonset;
-
+		this.name = name;
 	}
 
 	/**

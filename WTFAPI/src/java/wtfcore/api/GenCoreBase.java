@@ -1,10 +1,8 @@
-package cavebiomes.api;
+package wtfcore.api;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
-import wtfcore.api.BlockInfo;
-import wtfcore.api.BlockSets;
 
 
 
